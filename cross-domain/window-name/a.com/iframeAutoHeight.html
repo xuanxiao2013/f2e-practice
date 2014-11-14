@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iframe 自适应高度</title>
+</head>
+<body>
+page: www.a.com
+<hr/>
+<div id="container" style="border:1px solid green;">
+	<iframe src="http://www.b.com/content.html" id="iframe" frameBorder="0" scrolling="no"></iframe>
+</div>
+
+
+<script>
+	var state = 0, iframe = document.createElement('iframe'),
+            loadfn = function() {
+			if (state === 1) {
+				var data = iframe.contentWindow.name;
+				if(iframe.detachEvent){
+					iframe.detachEvent("onload", loadfn );
+				}else{
+					iframe.removeEventListener( "load", loadfn );
+				}	
+				iframe.contentWindow.close();
+				document.body.removeChild(iframe);
+				var params = data.split('_');
+				setParam(params[0], params[1]);
+			} else if (state === 0) {
+				state = 1;
+				iframe.contentWindow.location = "http://www.a.com/proxy.html";
+			}
+		};
+   iframe.src = 'http://www.b.com/content.html';
+	if (iframe.attachEvent) {
+		iframe.attachEvent('onload', loadfn);
+	} else {
+		iframe.onload = loadfn;
+	}
+	iframe.style.display = 'none';
+	document.body.appendChild(iframe);
+
+
+	function setParam(w, h){
+		var iframe = document.getElementById('iframe'), fuck = 20;
+		iframe.style.height = (h * 1 + fuck) + 'px';
+		iframe.style.width = (w * 1 + fuck) + 'px';
+	}
+</script>
+
+
+
+<script>
+</script>
+</body>
+</html>

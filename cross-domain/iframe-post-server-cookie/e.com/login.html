@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script src="jquery.js"></script>
+	输入uname登陆成功， 其它都失败<br />
+	username: <input type="text" id="username" value="" />
+	<button id="submitBtn">登陆</button>
+	<div id="tip"></div>
+	<script>
+		$(function(){
+			var search = location.search;
+			var jump = search && search.split('?jump=')[1] || '';
+			$('#submitBtn').on('click', function(){
+				$.post('/login.php', { uname: $('#username').val()}, function(data){
+					if(parseInt(data, 10) === 1){
+						window.top.location.href = jump;
+					}else{
+						$('#tip').html('登陆验证失败');
+					}
+				});
+			});
+		});
+	</script>
+</body>
+</html>
+

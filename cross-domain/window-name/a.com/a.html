@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>通过window.name跨域传递参数</title>
+</head>
+<body>
+原理如下：在同一个窗口中，共享window.name的值。跨域传递参数成功的核心就是利用者一点。
+在a.com/a.html中创建iframe指向b.com/b.com，在b.com/b.com中设置window.name='所需要传递的参数'；
+等待iframe加载成功，把iframe重新指向a.com/proxy.html, 这个代理页面的内容为空；等待此时iframe加载
+成功，因为此时同域，就可以获取此时iframe中的window.name的值就是刚才b.com/b.com中传递的参数。
+这里要注意的就是此窗口中要是还有其它的iframe也使用iframe，就是导致参数传递失败。
+<hr />
+	 <script>
+        var state = 0, iframe = document.createElement('iframe'),
+            loadfn = function() {
+                if (state === 1) {
+                    var data = iframe.contentWindow.name;
+					if(iframe.detachEvent){
+						iframe.detachEvent("onload", loadfn );
+					}else{
+						iframe.removeEventListener( "load", loadfn );
+					}	
+					iframe.contentWindow.close();
+					document.body.removeChild(iframe);
+					alert(data);
+                } else if (state === 0) {
+                    state = 1;
+                    iframe.contentWindow.location = "http://www.a.com/proxy.html";
+                }
+            };
+        iframe.src = 'http://www.b.com/b.html';
+        if (iframe.attachEvent) {
+            iframe.attachEvent('onload', loadfn);
+        } else {
+            iframe.onload = loadfn;
+        }
+        document.body.appendChild(iframe);
+    </script>
+</body>
+</html>

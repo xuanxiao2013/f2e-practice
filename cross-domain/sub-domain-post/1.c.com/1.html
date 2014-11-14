@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sub-domain-post</title>
+</head>
+<body>
+	跨子域post
+	<br />
+	<script src="jquery.js"></script>
+	输入uname登陆成功， 其它都失败<br />
+	<form method="post" id="form">
+		username: <input type="text" id="uname" name="uname" value="" />
+		<input id="submitBtn" type="button" value="submit"/>
+	</form>
+	<div id="tip"></div>
+	<script>
+		var $form = $('#form'), $tip = $('#tip');
+		document.domain = "c.com";
+		$('#submitBtn').on('click', function(){
+			$('body').append('<iframe id="iframe" name="ifameName" style="display:none;"></iframe>');
+			var $iframe = $('#iframe');
+			$form.attr({'target': 'ifameName'});
+			$form.attr({'action': 'http://2.c.com/2.php'});
+			$form.get(0).submit();
+			$iframe.load(function(){
+				var cwin = $iframe.get(0).contentDocument;	
+				if(parseInt(cwin.body.innerHTML, 10) === 1){
+					$tip.html('登陆成功');	
+				}else{
+					$tip.html('登陆验证失败');
+				}
+
+			});
+		});
+	</script>
+</body>
+</html>
