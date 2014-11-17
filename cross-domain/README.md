@@ -27,6 +27,6 @@ window.postMessage( data, targetOrigin)
 - data 是要传递的数据，字符串类型，可以将复杂的类型序列化为字符串传送
 - targetOrigin 是目标域，假如设为 `http://a.com` 那么 `http://b.com` 就不会收到传送的数据
 
-######messageJs 最佳的post跨域实现
+#####messageJs 最佳的post跨域实现
 原理：支持html5 postMessage属性的，就用它，不支持的 利用navigator对象在父窗口和iframe之间是共享的。
 [MessengerJS](https://github.com/biqing/MessengerJS)，这个库实现了，但是它提供例子不能运行，我做了完善。
