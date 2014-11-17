@@ -7,6 +7,7 @@ window.name值的长度据说是2M，这个没有真实测过。原理如下：�
 应用实例：
 
 - iframe高度自适应
+- 统计打点
 
 ####利用document.domain跨子域post提交
 原理如下：就是给两个自域的document.domain 都设置为相同的主语
@@ -25,3 +26,7 @@ window.postMessage( data, targetOrigin)
 - window 是目标 window 对象，可以为 iframe 的 contentWindow，或者 window.open 的返回值……
 - data 是要传递的数据，字符串类型，可以将复杂的类型序列化为字符串传送
 - targetOrigin 是目标域，假如设为 `http://a.com` 那么 `http://b.com` 就不会收到传送的数据
+
+###### messageJs 最佳的post跨域实现
+原理：支持html5 postMessage属性的，就用它，不支持的 利用navigator对象在父窗口和iframe之间是共享的。
+[MessengerJS](https://github.com/biqing/MessengerJS)，这个库实现了，但是它提供例子不能运行，我做了完善。
