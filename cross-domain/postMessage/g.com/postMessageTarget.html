@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+         // 依据传入的 message 返回响应的数据
+        window.addEventListener("message", function(e) {
+            if (e.data) {
+				console.log(e.data);
+                e.source.postMessage("我来自f.com", "*");
+            }
+        }, false);
+    </script>
+</body>
+
+</html>
+

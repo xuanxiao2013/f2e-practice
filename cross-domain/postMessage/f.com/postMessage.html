@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+	看控制台输出结果<br />
+    <iframe src="http://g.com/postMessageTarget.html"></iframe>
+    <script>
+        var ifr = document.getElementsByTagName("iframe")[0];
+        ifr.addEventListener("load", function() {
+            // 传送参数
+            ifr.contentWindow.postMessage("这个是给你传递的参数", "*");
+        }, false);
+         // 获取返回的数据
+        window.addEventListener("message", function(e) {
+            console.log("响应数据: " + e.data);
+        });
+    </script>
+</body>
+</html>

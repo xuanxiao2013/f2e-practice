@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	用服务端cookie跨主域post提交
+	<br />
+	<script src="jquery.js"></script>
+	输入uname登陆成功， 其它都失败<br />
+	<form method="post" id="form">
+		username: <input type="text" id="uname" name="uname" value="" />
+		<input id="submitBtn" type="button" value="submit"/>
+	</form>
+	<div id="tip"></div>
+
+	<script>
+		var $form = $('#form'), $tip = $('#tip');
+		$('#submitBtn').on('click', function(){
+				writeCookie('login');
+		});
+		function login(status){
+			var status = status * 1;
+			if(status === 1){
+				$tip.html('登陆成功');
+			}else{
+				$tip.html('用户名不正确');
+			}
+		}
+		function writeCookie(callback){
+			$('body').append('<iframe id="iframe" name="ifameName" style="display:none;"></iframe>');
+			var $iframe = $('#iframe');
+			$form.attr({'target': 'ifameName'});
+			$form.attr({'action': 'http://i.com/login.php?op=write'});
+			$form.get(0).submit();
+			$iframe.load(function(){
+				readCookie(callback);
+				$iframe.attr({'src': ''}).remove();
+			});
+		}
+
+
+		function readCookie(callback){
+			if(!callback){
+				return false;
+			}
+			var scriptSrc = 'http://i.com/login.php?op=read&callback=' + callback + '&_stime' + new Date().getTime();
+			$('<script/>', {id : 'readCookie', src: scriptSrc}).appendTo($('head'));
+			$('#readCookie').ready(function(){ $(this).remove(); });
+		}
+	</script>
+
+</body>
+</html>
+
