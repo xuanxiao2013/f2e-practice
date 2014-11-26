@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css夸浏览器文字截断</title>
+	<style type="text/css">
+		.a{width:120px;margin:100px auto;border:1px solid green;}
+		.b{
+			line-height: 35px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			_width:100px;
+		}	
+		.c{width:120px;margin:100px auto;border:1px solid green;}
+		.d{
+			line-height: 35px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			_width:100px;
+		}	
+	</style>
+</head>
+<body>
+	<div class="a">
+		<div class="b">123456789你好0abcdefghijhlmnopqrstuvbwsxyz</div>
+	</div>
+	<div class="c">
+		<div class="d">发大水发的说法的说法第三方阿发的说法阿萨德</div>
+	</div>
+</body>
+</html>
