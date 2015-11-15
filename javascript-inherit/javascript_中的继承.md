@@ -186,4 +186,4 @@ log('son love:' + son.love.game); // son love:DoTa3
 
 缺点: 复杂
 
-[详细代码实现](https://github.com/xuanxiao2013/f2e-practice/blob/master/javascript-inherit/inherit3.js):
+[详细代码实现](https://github.com/xuanxiao2013/f2e-practice/blob/master/javascript-inherit/inherit3.js)
