@@ -5,3 +5,29 @@
     margin-top:10px;
     background-color: rgba(0,0,0,.5);
 }
+slides > slide .slide-wrapper{
+    max-width: 1200px;
+}
+
+.txtLeft{
+    text-align:left;
+}
+
+.f14{
+    font-size: 14px;
+}
+
+.f16{
+    font-size: 16px;
+}
+.f20{
+    font-size: 16px;
+}
+
+.f24{
+    font-size: 16px;
+}
+.f28{
+    font-size: 16px;
+}
+

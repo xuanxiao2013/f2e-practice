@@ -22,10 +22,6 @@ cmd: nodeppt start -p 8080 -d /Users/xx/www/github/f2e-practice/es6-share/ppts/ 
 ----
 ![](/img/bom.jpg )
 
-* 核心重点
-  * ajax
-  * History
-
 [slide]
 ## DOM介绍
 ----
@@ -33,10 +29,7 @@ cmd: nodeppt start -p 8080 -d /Users/xx/www/github/f2e-practice/es6-share/ppts/ 
 
 * DOM操作：节点查找、创建、插入、删除、复制、替换、html文本或值、样式、属性
 * DOM级别: DOM-1、DOM-2、DOM-3
-
-* 核心重点
-  * 事件流
-  * 性能
+* 核心重点: 事件流、性能
 
 [slide]
 ## DOM标准
@@ -50,9 +43,11 @@ cmd: nodeppt start -p 8080 -d /Users/xx/www/github/f2e-practice/es6-share/ppts/ 
 ----
 
 ![](/img/ecmascript.png)
+<div class="f16">
 * 简单地说，ECMAScript 描述了：语法、类型、语句、关键字、保留字、运算符、对象等内容 {:&.rollIn}
 * ECMAScript 是基于对象的：语言的基本部分和宿主设施由对象提供，一个 ECMAScript 程序是一组可通信的对象。
 * 每个浏览器都有它自己的 ECMAScript 接口的实现，然后这个实现又被扩展，包含了 DOM 和 BOM。当然还有其他实现并扩展了 ECMAScript 的语言，例如 Windows 脚本宿主（Windows Scripting Host, WSH）、Macromedia 在 Flash 和 Director MX 中的 ActionScript，以及 Nombas ScriptEase。
+<div>
 
 [slide]
 ## ECMAScript 名词解释
@@ -62,11 +57,12 @@ cmd: nodeppt start -p 8080 -d /Users/xx/www/github/f2e-practice/es6-share/ppts/ 
     color: red;
 }
 </style>
-* <span class='ecmaScript'>ECMAScript</span>：一个由 ECMA International （欧洲计算机制造商协会）进行标准化，TC39 委员会进行监督的语言。通常用于指代标准本身。
-* <span class='ecmaScript'>ECMAScript 3 (ES3)</span>：ECMAScript 的第三版修订，于 1999 年发布第一个正式版本。
-* <span class='ecmaScript'>ECMAScript 5 (ES5)</span>：ECMAScript 的第五版修订，于 2009 年完成标准化。这个规范在所有现代浏览器中都相当完全的实现了。
-* <span class='ecmaScript'>ECMAScript 6 (ES6) / ECMAScript 2015 (ES2015)</span>：ECMAScript 的第六版修订，于 2015 年完成标准化。
-* <span class='ecmaScript'>ECMAScript 2016( ES7 )</span>：预计的第七版 ECMAScript 修订，计划于明年夏季发布。这份规范具体将包含哪些特性还没有最终确定
+<div class="f28">
+* **ECMAScript**：一个由 ECMA International （欧洲计算机制造商协会）进行标准化，TC39 委员会进行监督的语言。通常用于指代标准本身。 {:&.rollIn}
+* **ECMAScript 3 (ES3)**：ECMAScript 的第三版修订，于 1999 年发布第一个正式版本。
+* **ECMAScript 5 (ES5)**：ECMAScript 的第五版修订，于 2009 年完成标准化。这个规范在所有现代浏览器中都相当完全的实现了。
+* **ECMAScript 6 (ES6) / ECMAScript 2015 (ES2015)**：ECMAScript 的第六版修订，于 2015 年完成标准化。
+* **ECMAScript 2016( ES7 )**：预计的第七版 ECMAScript 修订，计划于明年夏季发布。这份规范具体将包含哪些特性还没有最终确定
 
 
 [slide]
@@ -80,11 +76,11 @@ cmd: nodeppt start -p 8080 -d /Users/xx/www/github/f2e-practice/es6-share/ppts/ 
 ## ECMAScript3 详细介绍
 ----
 
-* js核心概念
- * this、函数(bind, call, apply)、闭包、原型、原型链、作用域
+* js核心概念  {:&.rollIn}
+ * this、函数(bind, call, apply)、闭包、原型、原型链、作用域 {:&.rollIn}
  * 继承、设计模式
-* 文章推荐
-  * [ECMA-262-3 in detail](http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/)
+* 文章推荐 
+  * [ECMA-262-3 in detail](http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/) {:&.rollIn}
   * [深入学习JavaScript](http://goddyzhao.tumblr.com/JavaScript-Internal)
   
 
@@ -98,9 +94,6 @@ cmd: nodeppt start -p 8080 -d /Users/xx/www/github/f2e-practice/es6-share/ppts/ 
 
 <br />
 [ECMAScript 6 会重蹈 ECMAScript 4 的覆辙吗？](http://www.zhihu.com/question/24715618)
-
-
-
 
 [slide]
 ## ECMAScript5 详细介绍
@@ -133,11 +126,11 @@ strict();
 ![](/img/ecmascript5.png)
 [详细](http://www.cnblogs.com/moveofgod/archive/2012/11/03/2751745.html)
 
-
 [slide]
 ## ECMAScript6 特性介绍
 ----
-1. arrows - 箭头函数 
+<div class="f28">
+1. arrows - 箭头函数  {:&.rollIn}
 2. classes - 类
 3. enhanced object literals - 增强对象字面量
 4. template strings - 模板字符串
@@ -148,10 +141,6 @@ strict();
 9. generators函数
 10. unicode - 字符串扩展
 11. modules - 模块
-
-[slide]
-## ECMAScript6 特性介绍
-----
 12. module loaders - 模块加载
 13. map + set + weakmap + weakset
 14. proxies - 代理
@@ -162,7 +151,7 @@ strict();
 19. binary and octal literals - 二进制与八进制字面量
 20. reflect api - 反射API
 21. tail calls - 尾调用
-    
+
 [slide]
 ## ECMAScript6 对前端影响
 ----
@@ -253,7 +242,7 @@ class Son extends Parent {
 ## ECMAScript6 环境篇
 ----
 
-* [ES6 浏览器兼容](http://kangax.github.io/compat-table/es6/)
+* [ES6 浏览器兼容](http://kangax.github.io/compat-table/es6/)   {:&.rollIn}
 * [ES6 to ES5 code](https://github.com/hax/es6-in-action/blob/master/gulpfile.js)
 * [babel.js 各种工具插件 ](https://babeljs.io/docs/setup/)
 
@@ -275,8 +264,8 @@ var result = values.sort((a, b) =>{
 [slide]
 ## ECMAScript6 - arrow 说明
 ----
-
-* 不同点:
+<div class="f28">
+* 不同点: {:&.rollIn}
   * this: 函数内的this值取决于箭头函数在哪里定义，而不是箭头函数的执行的上下文， this不可变
   * new: 箭头函数不能使用new 关键字来实例化对象，会报错
   * arguments 对象: 不能通过arguments 对象访问参数，只能通过显式命名或者 rest 参数获取 来获取
@@ -284,51 +273,53 @@ var result = values.sort((a, b) =>{
   * 对箭头函数进行typeof操作会返回“function”。
   * 箭头函数仍是Function的实例，故而instanceof的执行方式与传统函数一致。
   * 箭头函数没有自己的this，箭头函数中的this值始终来自闭包所在的作用域, call(), apply(), bind()方法在箭头函数上依然可用，虽然没有太大的价值。
-
-
 * 结论： 推荐使用
 [slide]
 ## ECMAScript6 - class
-~~~javascript
-// es3
-function Point(x,y){
- this.x = x;
- this.y = y;
-}
-Point.prototype.toString = function () {
- return '(' + this.x + ', ' + this.y + ')';
-}
-Point.prototype.radius = function () {
- return 10;
-}
-Point.bgColor = function () {
- return 'red';
-}
-~~~
-~~~javascript
-// es6
-class Point {
- constructor(x, y) {
-   this.x = x;
-   this.y = y;
- }
- toString() {
-   return '(' + this.x + ', ' + this.y + ')';
- }
-}
-Point.prototype.radius = function () {
- return 10;
-}
-Point.bgColor = function () {
- return 'red';
-}
-~~~
+
+<div class="columns-2">
+    <pre><code class="javascript">
+    // es3
+    function Point(x,y){
+     this.x = x;
+     this.y = y;
+    }
+    Point.prototype.toString = function () {
+     return '(' + this.x + ', ' + this.y + ')';
+    }
+    Point.prototype.radius = function () {
+     return 10;
+    }
+    Point.bgColor = function () {
+     return 'red';
+    }
+    </code></pre>
+    <pre><code class="javascript">
+    // es6
+    class Point {
+     constructor(x, y) {
+       this.x = x;
+       this.y = y;
+     }
+     toString() {
+       return '(' + this.x + ', ' + this.y + ')';
+     }
+    }
+    Point.prototype.radius = function () {
+     return 10;
+    }
+    Point.bgColor = function () {
+     return 'red';
+    }
+    </code></pre>
+</div>
+
 
 [slide]
 ## ECMAScript6 - class 说明
 ---
-   
-* es6 内部定义的方法 不可枚举，但是es5 是可以的
+<div class="f28">
+* es6 内部定义的方法 不可枚举，但是es5 是可以的    {:&.rollIn}
 * class不存在变量提升
 * 类和模块的内部，默认就是严格模式，所以不需要使用use strict指定运行模式。考虑到未来所有的代码，其实都是运行在模块之中，所以ES6实际上把整个语言升级到了严格模式。
 * 静态方法前面添加static 关键字
@@ -342,7 +333,6 @@ Point.bgColor = function () {
 [slide]
 ## enhanced object literals - 增强对象字面量
 ---
-对象字面量将扩展到可以支持在设置当前对象的prototype对象，对于foo: foo赋值的缩写，定义方法，使用父调用，以及通过表达式计算（动态的）属性名。这些也使得对象字面量和类的声明的关系更加紧密了，基于对象的设计也能从这些相同的便利条件中得到一些益处。
 ~~~javascript
 var obj = {
     // __proto__
@@ -361,6 +351,8 @@ var obj = {
 };
 ~~~
 
+<div class="f28" style="text-align:left;line-height:30px;">
+* 对象字面量将扩展到可以支持在设置当前对象的prototype对象，对于foo: foo赋值的缩写，定义方法，使用父调用，以及通过表达式计算（动态的）属性名。这些也使得对象字面量和类的声明的关系更加紧密了，基于对象的设计也能从这些相同的便利条件中得到一些益处。
 * 结论： 推荐使用
 
 [slide]
@@ -379,44 +371,51 @@ var name = "Bob", time = "today";
 `Hello ${name}, how are you ${time}?`
 ~~~
 
-* 结论： 推荐使用
+结论： 推荐使用
 
 [slide]
 ## destructuring - 解构
 ---
+<div class="f28" style="text-align:left;line-height:30px;">
 解构允许使用模式匹配进行绑定，支持数组和对象的匹配。解构具有容错性，与在标准对象foo["bar"]里面做查询,若找不到则返回undefined这种处理方式相似。
-~~~javascript
-// 数组匹配
-var [a, , b] = [1,2,3];
-log(a) // 1
-log(b) // 3
 
-// 对象匹配
-var getASTNode = { op: a, lhs: { op: b }, rhs: 'c' }
+<div class="columns-3">
+    <pre><code class="javascript">
+    // 数组匹配
+    var [a, , b] = [1,2,3];
+    log(a) // 1
+    log(b) // 3
+    // 对象匹配
+    var getASTNode = { op: a, lhs: { op: b }, rhs: 'c' }
+    // 对象匹配简写
+    // 绑定 `op`, `lhs` and `rhs` 进当前作用域
+    var {op, lhs, rhs} = getASTNode
+    log(op) // 1
+    log(lhs) // {op: 3}
+    log(rhs) // c
+    </code></pre>
+    
+    <pre><code class="javascript">
+    //// 也能用在参数的位置上
+    function g({name: x}) {
+        console.log(x); // 5
+    }
+    g({name: 5})
+    </code></pre>
+    
+    <pre><code class="javascript">
+    // 解构的容错性
+    var [a] = [];
+    log(a === undefined); // true
+    // 解构具有默认值的容错性
+    var [a = 1] = [];
+    log(a === 1); // true
+    </code></pre>
+</div>
 
-// 对象匹配简写
-// 绑定 `op`, `lhs` and `rhs` 进当前作用域
-var {op, lhs, rhs} = getASTNode
-log(op) // 1
-log(lhs) // {op: 3}
-log(rhs) // c
+结论： 使用情况比较复杂， 有考虑地使用
 
-//// 也能用在参数的位置上
-function g({name: x}) {
-    console.log(x); // 5
-}
-g({name: 5})
 
-// 解构的容错性
-var [a] = [];
-log(a === undefined); // true
-
-// 解构具有默认值的容错性
-var [a = 1] = [];
-log(a === 1); // true
-~~~
-
-* 结论： 使用情况比较复杂， 有考虑地使用
 [slide]
 ## default + rest + spread - 默认赋参+不定参数+参数展开
 ---
@@ -437,8 +436,7 @@ function f(x, y, z) {
 // Pass each elem of array as argument
 f(...[1,2,3]) == 6
 ~~~
-
-* 结论： 推荐使用
+结论： 推荐使用
 [slide]
 ## rest 不定参数说明-函数调用
 ---
@@ -496,10 +494,16 @@ function f(x, y, z) {
 f(...[1,2,3]) == 6
 ~~~
 
-
 [slide]
 ## let + const - 块级作用域
 ---
+
+<style>
+.pageLetConst pre code{
+    margin-top:20px;
+}
+</style>
+<div class="txtLeft pageLetConst">
 块级作用域绑定构造体。let是新的var。 const是单次赋值。静态的约束使得变量要在赋值之后才可使用。
 ~~~javascript
 function f() {
@@ -517,85 +521,87 @@ function f() {
 }
 ~~~
 
-* 不存在变量提升
-~~~javascript
-console.log(foo); // ReferenceError
-let foo = 2;
-~~~
-* 不允许重复声明
+[slide]
+## let + const - 块级作用域
+---
+<div class="columns-3">
+    <pre><code class="javascript">
+     // 不存在变量提升
+     console.log(foo); // ReferenceError
+     let foo = 2;
+    </code></pre>
+    <pre><code class="javascript">
+      //不允许重复声明
+      // 报错
+      function test() {
+        let a = 10;
+        var a = 1;
+      }
+      // 报错
+      function test() {
+        let a = 10;
+        let a = 1;
+      }
+      
+      function func(arg) {
+        let arg; // 报错
+      }
+      function func(arg) {
+        {
+          let arg; // 不报错
+        }
+      }
+    </code></pre>
+    <pre><code class="javascript">
+        // 块级作用域
+        function f1() {
+          let n = 5;
+          if (true) {
+            let n = 10;
+          }
+          console.log(n); // 5
+        }
+        // IIFE写法
+        (function () {
+          var tmp = ...;
+          ...
+        }());
+        // 块级作用域写法
+        {
+          let tmp = ...;
+          ...
+        }
+    </code></pre>
+</div>
 
-~~~javascript
-// 报错
-function test() {
-  let a = 10;
-  var a = 1;
-}
-
-// 报错
-function test() {
-  let a = 10;
-  let a = 1;
-}
-~~~
-~~~javascript
-function func(arg) {
-  let arg; // 报错
-}
-function func(arg) {
-  {
-    let arg; // 不报错
-  }
-}
-~~~
-* 块级作用域
-~~~javascript
-function f1() {
-  let n = 5;
-  if (true) {
-    let n = 10;
-  }
-  console.log(n); // 5
-}
-
-// IIFE写法
-(function () {
-  var tmp = ...;
-  ...
-}());
-// 块级作用域写法
-{
-  let tmp = ...;
-  ...
-}
-~~~
 
 * 结论： 推荐使用
 
 [slide]
 ## iterators + for..of - 遍历器
 ---
+<div class="columns-2">
+    <pre><code class="javascript">
+    for (var index in myArray) {
+      console.log(myArray[index]);
+    }
+    </code></pre>
+    <pre><code class="javascript">
+    for (let value of myArray) {
+      console.log(value);
+    }
+    </code></pre>
+</div>
 
-~~~javascript
-for (var index in myArray) {
-  console.log(myArray[index]);
-}
-~~~
+<div class="f28" style="text-align:left;">
 * for...in循环有几个缺点。
   * 数组的键名是数字，但是for...in循环是以字符串作为键名“0”、“1”、“2”等等。
   * for...in循环不仅遍历数字键名，还会遍历手动添加的其他键，甚至包括原型链上的键。
   * 某些情况下，for...in循环会以任意顺序遍历键名。
-~~~javascript
-for (let value of myArray) {
-  console.log(value);
-}
-~~~
 * for...of循环相比上面几种做法，有一些显著的优点。
   * 有着同for...in一样的简洁语法，但是没有for...in那些缺点。
   * 不同用于forEach方法，它可以与break、continue和return配合使用。
   * 提供了遍历所有数据结构的统一操作接口。
-
-[detail](http://es6.ruanyifeng.com/#docs/iterator)
-
 * 结论： 使用情况比较复杂， 有考虑地使用
 
 [slide]
@@ -608,53 +614,56 @@ for (let value of myArray) {
 [slide]
 ## unicode - 字符串扩展
 ---
-基本没什么影响，我们很少遇到这些情况且已经习惯了这些情况，所以可以认为这个特性不存在而继续开发。
+* 基本没什么影响，我们很少遇到这些情况且已经习惯了这些情况，所以可以认为这个特性不存在而继续开发。
 
 * 结论： 不使用
 
 [slide]
 ## modules - 模块
 ---
-~~~javascript
-// lib/math.js
-export function sum(x, y) {
-  return x + y;
-}
-export var pi = 3.141593;
-// app.js
-import * as math from "lib/math";
-alert("2π = " + math.sum(math.pi, math.pi));
-// otherApp.js
-import {sum, pi} from "lib/math";
-alert("2π = " + sum(pi, pi));
-~~~
+<div class="columns-2">
+    <pre><code class="javascript">
+    // lib/math.js
+    export function sum(x, y) {
+      return x + y;
+    }
+    export var pi = 3.141593;
+    // app.js
+    import * as math from "lib/math";
+    alert("2π = " + math.sum(math.pi, math.pi));
+    // otherApp.js
+    import {sum, pi} from "lib/math";
+    alert("2π = " + sum(pi, pi));
+    </code></pre>
+    <pre><code class="javascript">
+    // lib/math.js
+    export * from "lib/math";
+    export var e = 2.71828182846;
+    export default function(x) {
+        return Math.log(x);
+    }
+    // app.js
+    import ln, {pi, e} from "lib/mathplusplus";
+    alert("2π = " + ln(e)*pi*2);
+    </code></pre>
+</div>
 
-~~~javascript
-// lib/math.js
-export * from "lib/math";
-export var e = 2.71828182846;
-export default function(x) {
-    return Math.log(x);
-}
-// app.js
-import ln, {pi, e} from "lib/mathplusplus";
-alert("2π = " + ln(e)*pi*2);
-~~~
-
+<br />
 * 结论： 使用情况比较复杂， 有考虑地使用
 [slide]
 ## module loaders - 模块加载
 ---
-ES6终于在语言层面上定义了模块的语法，但这并不代表我们现在可以使用ES6的模块，因为实际在ES6定稿的时候，它把模块加载器的规范给移除了。因此我们现在有的仅仅是一个模块的import和export语法，但具体如“模块名如何对应到URL”、“如何异步/同步加载模块”、“如何按需加载模块”等这些均没有明确的定义。
-因此，在模块这一块，我们的建议是使用标准语法书写模块，但使用AMD作为运行时模块解决方案，其特点有：
-  保持使用import和export进行模块的引入和定义，可以安全地使用命名export和默认export。
-  在使用Babel转换时，配置modules: 'amd'转换为AMD的模块定义。
-  假定模块的URL解析是AMD的标准，import对应的模块名均以AMD标准书写。
-  不要依赖SystemJS这样的ES6模块加载器。
-这虽然很可能导致真正模块加载器规范定型后，我们的import模块路径是不规范的。但出于ES6的模块不配合HTTP/2简直没法完的考虑，AMD一定很长一段时间内持续存在，我们的应用基本上都是等不到HTTP/2实际可用的日子的，所以无需担心。
+<div class="f28" style="line-height:30px;">
+* ES6终于在语言层面上定义了模块的语法，但这并不代表我们现在可以使用ES6的模块，因为实际在ES6定稿的时候，它把模块加载器的规范给移除了。因此我们现在有的仅仅是一个模块的import和export语法，但具体如“模块名如何对应到URL”、“如何异步/同步加载模块”、“如何按需加载模块”等这些均没有明确的定义。
 
-
+* 因此，在模块这一块，我们的建议是使用标准语法书写模块，但使用AMD作为运行时模块解决方案，其特点有：
+  * 保持使用import和export进行模块的引入和定义，可以安全地使用命名export和默认export。
+  * 在使用Babel转换时，配置modules: 'amd'转换为AMD的模块定义。
+  * 假定模块的URL解析是AMD的标准，import对应的模块名均以AMD标准书写。
+  * 不要依赖SystemJS这样的ES6模块加载器。
+* 这虽然很可能导致真正模块加载器规范定型后，我们的import模块路径是不规范的。但出于ES6的模块不配合HTTP/2简直没法完的考虑，AMD一定很长一段时间内持续存在，我们的应用基本上都是等不到HTTP/2实际可用的日子的，所以无需担心。
 * 结论： 不使用
+
 [slide]
 ## map + set + weakmap + weakset
 ---
@@ -681,7 +690,7 @@ var ws = new WeakSet();
 ws.add({ data: 42 });
 // Because the added object has no other references, it will not be held in the set
 ~~~
-
+<div class="f28" style="line-height:30px;text-align:left;">
 * WeakMap和WeakSet是没有办法模拟实现的，因此不要使用。
 * 结论： 使用情况比较复杂， 有考虑地使用
 [slide]
@@ -701,15 +710,12 @@ var p = new Proxy(target, handler);
 p.world === 'Hello, world!';
 ~~~
 
-
-* 结论： 不使用
+结论： 不使用
 [slide]
 ## symbols - 第七种数据类型
 ---
 * Symbol最简单的解释是“可用于键值的对象”，最大的用处可能就是用来定义一些私有属性了。
 * 我们建议谨慎使用Symbol，如果你使用它来定义私有属性，那么请保持整个项目内是一致的，不要混用Symbol和闭包定义私有属性等手段。
-
-
 * 结论：慎重地使用
 [slide]
 ## subclassable built-ins
@@ -737,8 +743,7 @@ arr[1] = 12;
 arr.length == 2
 ~~~
 
-? 按照ES6的规范，内置类型如Array、Function、Date等都是可以继承且没有什么坑的。但是我们的代码要跑在ES3-5的环境下，显然这一特性是不能享受的。
-
+* 按照ES6的规范，内置类型如Array、Function、Date等都是可以继承且没有什么坑的。但是我们的代码要跑在ES3-5的环境下，显然这一特性是不能享受的。
 * 结论： 不使用
 
 [slide]
@@ -765,8 +770,9 @@ var p = timeout(1000).then(() => {
 [slide]
 ## math + number + string + array + object APIs
 ---
-
+<div class="txtLeft" style="margin-bottom:20px;">
 新加入了许多库，包括核心数学库，进行数组转换的协助函数，字符串 helper，以及用来进行拷贝的Object.assign。
+</div>
 ~~~javascript
 Number.EPSILON
 Number.isInteger(Infinity) // false
@@ -792,14 +798,13 @@ Array.of(1, 2, 3) // Similar to new Array(...), but without special one-arg beha
 Object.assign(Point, { origin: new Point(0,0) })
 ~~~
 
-* 结论： 使用
+结论： 使用
 
 [slide]
 ## binary and octal literals - 二进制与八进制字面量
 ---
 * 这个特性基本上是留给算法一族用的，因此我们的建议是除非数字本身在二/八进制下才有含义，否则不要使用。
-
-结论：慎重地使用
+* 结论：慎重地使用
 
 [slide]
 ## reflect api - 反射API
@@ -824,11 +829,6 @@ function factorial(n, acc = 1) {
 factorial(100000)
 ~~~
 结论： 使用情况比较复杂， 有考虑地使用
-
-
-[slide]
-## ECMAScript6来了，我们该怎么办?
-
 
 [slide]
 
