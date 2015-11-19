@@ -122,8 +122,10 @@ strict();
 [slide]
 ## ECMAScript5 详细介绍
 ----
-* 内建对象的变化
+内建对象的变化
+<br />
 ![](/img/ecmascript5.png)
+<br />
 [详细](http://www.cnblogs.com/moveofgod/archive/2012/11/03/2751745.html)
 
 [slide]
@@ -829,6 +831,31 @@ function factorial(n, acc = 1) {
 factorial(100000)
 ~~~
 结论： 使用情况比较复杂， 有考虑地使用
+
+[slide]
+##参考
+---
+
+<div class="txtLeft f28" style="margin-bottom:20px;">
+* ECMAScript 入门: http://es6.ruanyifeng.com/#README
+* es6 特性：https://github.com/rse/es6-features
+* es6转es5: https://babeljs.io/
+* 透过es6看js的未来: http://johnhax.net/2014/es6-js-future/
+* es6 测试题： http://perfectionkills.com/javascript-quiz-es6/,
+* es6 测试题答案： https://gist.github.com/DmitrySoshnikov/3928607cb8fdba42e712
+* 深入浅出es6系列：https://hacks.mozilla.org/category/es6-in-depth/
+* es6标准 网站: http://www.ecma-international.org/ecma-262/6.0/
+* 浏览器兼容: http://kangax.github.io/compat-table/es6/
+* 在线学习网站： 
+    * http://www.es6fiddle.net/  
+    * http://learnharmony.org/#lessons/destructuring    
+    * http://learnharmony.org/
+* es6 资料汇集： https://github.com/ericdouglas/ES6-Learning
+* es6 在线书籍： 
+    * https://leanpub.com/javascriptallongesix/read
+    * http://chimera.labs.oreilly.com/books/1234000001623/index.html
+    * https://leanpub.com/understandinges6/read/
+* 给 JavaScript 初心者的 ES2015 实战: http://gank.io/post/564151c1f1df1210001c9161
 
 [slide]
 
