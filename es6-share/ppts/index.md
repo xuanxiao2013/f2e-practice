@@ -5,8 +5,6 @@ transition: move
 files: /js/demo.js,/css/demo.css,/js/zoom.js
 theme: moon
 usemathjax: yes
-
-[slide]
 cmd: nodeppt start -p 8080 -d /Users/xx/www/github/f2e-practice/es6-share/ppts/  -H 127.0.0.1 -w
 
 
@@ -27,7 +25,7 @@ cmd: nodeppt start -p 8080 -d /Users/xx/www/github/f2e-practice/es6-share/ppts/ 
 ----
 ![](/img/dom.gif )
 
-* DOM操作：节点查找、创建、插入、删除、复制、替换、html文本或值、样式、属性
+* DOM操作：节点查找、创建、插入、删除、复制、替换、html文本或值、样式、属性  {:&.zoomIn}
 * DOM级别: DOM-1、DOM-2、DOM-3
 * 核心重点: 事件流、性能
 
@@ -44,7 +42,7 @@ cmd: nodeppt start -p 8080 -d /Users/xx/www/github/f2e-practice/es6-share/ppts/ 
 
 ![](/img/ecmascript.png)
 <div class="f16">
-* 简单地说，ECMAScript 描述了：语法、类型、语句、关键字、保留字、运算符、对象等内容 {:&.rollIn}
+* 简单地说，ECMAScript 描述了：语法、类型、语句、关键字、保留字、运算符、对象等内容   {:&.fadeIn} 
 * ECMAScript 是基于对象的：语言的基本部分和宿主设施由对象提供，一个 ECMAScript 程序是一组可通信的对象。
 * 每个浏览器都有它自己的 ECMAScript 接口的实现，然后这个实现又被扩展，包含了 DOM 和 BOM。当然还有其他实现并扩展了 ECMAScript 的语言，例如 Windows 脚本宿主（Windows Scripting Host, WSH）、Macromedia 在 Flash 和 Director MX 中的 ActionScript，以及 Nombas ScriptEase。
 <div>
@@ -77,10 +75,9 @@ cmd: nodeppt start -p 8080 -d /Users/xx/www/github/f2e-practice/es6-share/ppts/ 
 ----
 
 * js核心概念  {:&.rollIn}
- * this、函数(bind, call, apply)、闭包、原型、原型链、作用域 {:&.rollIn}
- * 继承、设计模式
+ * this、函数(bind, call, apply)、闭包、原型、原型链、作用域 {:&.bounceIn}
 * 文章推荐 
-  * [ECMA-262-3 in detail](http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/) {:&.rollIn}
+  * [ECMA-262-3 in detail](http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/)
   * [深入学习JavaScript](http://goddyzhao.tumblr.com/JavaScript-Internal)
   
 
@@ -132,7 +129,7 @@ strict();
 ## ECMAScript6 特性介绍
 ----
 <div class="f28">
-1. arrows - 箭头函数  {:&.rollIn}
+1. arrows - 箭头函数 
 2. classes - 类
 3. enhanced object literals - 增强对象字面量
 4. template strings - 模板字符串
@@ -161,7 +158,27 @@ strict();
 ![](/img/yubo-say.png )
 ![](/img/yubo-say2.png )
 
-react ... 前端流行类库都以开始全面支持es6
+react、angular2、vue ... 前端流行类库都以开始全面支持es6
+
+[slide]
+## ECMAScript6 代码展示
+----
+~~~javascript
+// es6 code
+export default function compose(...funcs) {
+  return arg => funcs.reduceRight((composed, f) => f(composed), arg)
+}
+~~~
+
+~~~javascript
+// es3 code
+function curry(fn) {
+    var args = [].slice.call(arguments, 1);
+    return function () {
+        return fn.apply(this, args.concat([].slice.call(arguments)));
+    };
+}
+~~~
 
 [slide]
 ## ECMAScript6 代码展示
@@ -186,14 +203,14 @@ export default function applyMiddleware(...middlewares) {
 }
 ~~~
 
-[slide]
-## ECMAScript6 代码展示
-----
 ~~~javascript
-export default function compose(...funcs) {
-  return arg => funcs.reduceRight((composed, f) => f(composed), arg)
-}
+const middleware = process.env.NODE_ENV === 'production' ?
+    [thunk, reducer1, reducer2] :
+    [thunk, logger];
+const store = applyMiddleware(...middleware)(createStore)(reducer);
 ~~~
+
+
 
 [slide]
 ## ECMAScript6 代码展示
@@ -228,23 +245,11 @@ class Son extends Parent {
 }
 ~~~
 
-
-
-[slide]
-## ECMAScript6 什么时候流行
-----
-
-![](/img/ryf.png )
-
-前端日益变得复杂，对js的要求更高
-
-设计模式是为了弥补语言的不足
-
 [slide]
 ## ECMAScript6 环境篇
 ----
 
-* [ES6 浏览器兼容](http://kangax.github.io/compat-table/es6/)   {:&.rollIn}
+* [ES6 浏览器兼容](http://kangax.github.io/compat-table/es6/)
 * [ES6 to ES5 code](https://github.com/hax/es6-in-action/blob/master/gulpfile.js)
 * [babel.js 各种工具插件 ](https://babeljs.io/docs/setup/)
 
@@ -267,7 +272,7 @@ var result = values.sort((a, b) =>{
 ## ECMAScript6 - arrow 说明
 ----
 <div class="f28">
-* 不同点: {:&.rollIn}
+* 不同点: 
   * this: 函数内的this值取决于箭头函数在哪里定义，而不是箭头函数的执行的上下文， this不可变
   * new: 箭头函数不能使用new 关键字来实例化对象，会报错
   * arguments 对象: 不能通过arguments 对象访问参数，只能通过显式命名或者 rest 参数获取 来获取
@@ -321,7 +326,7 @@ var result = values.sort((a, b) =>{
 ## ECMAScript6 - class 说明
 ---
 <div class="f28">
-* es6 内部定义的方法 不可枚举，但是es5 是可以的    {:&.rollIn}
+* es6 内部定义的方法 不可枚举，但是es5 是可以的  
 * class不存在变量提升
 * 类和模块的内部，默认就是严格模式，所以不需要使用use strict指定运行模式。考虑到未来所有的代码，其实都是运行在模块之中，所以ES6实际上把整个语言升级到了严格模式。
 * 静态方法前面添加static 关键字
@@ -669,7 +674,9 @@ function f() {
 [slide]
 ## map + set + weakmap + weakset
 ---
+
 ~~~javascript
+// 教程: http://es6.ruanyifeng.com/#docs/set-map
 // Sets
 var s = new Set();
 s.add("hello").add("goodbye").add("hello");
@@ -856,6 +863,63 @@ factorial(100000)
     * http://chimera.labs.oreilly.com/books/1234000001623/index.html
     * https://leanpub.com/understandinges6/read/
 * 给 JavaScript 初心者的 ES2015 实战: http://gank.io/post/564151c1f1df1210001c9161
+
+
+[slide]
+## ECMAScript6 什么时候流行
+----
+
+![](/img/ryf.png )
+
+[slide]
+## 思考
+---
+
+* 标准
+ * 支持标准、不支持标准、事实的标准
+
+
+[slide]
+## 思考
+---
+```javascript
+define(function(require, exports, moudle){
+        moudle.exports = {
+            
+        }
+});
+```
+```html
+<script src="sea.js"></script>
+<script>
+    seajs.use(['mod'], function(mod){
+    
+    });
+</script>
+```
+* 问题:
+    * 和dom节点处理以及状态维护问题
+    * js和html结合方式
+    * 和业界接轨
+
+[slide]
+## 思考
+---
+* 组件化
+    * 之前更多解决的是分治，而不是重用
+    * es6的模块化机制可以促进优秀的模块沉淀下来
+* 开发方式
+    * (原生开发、基于jquery的DOM开发)、mvc、 mvvm、(flux、reflux、redux)
+
+* 业界
+    * [支付宝](http://ant.design/)
+    * [百度](http://fis.baidu.com/)
+    * [京东前端集成解决方案](https://github.com/putaoshu/jdf)
+    * [组件化讨论](https://github.com/xufei/blog/issues/22)
+  
+[slide]
+![](/img/last.png )
+
 
 [slide]
 
