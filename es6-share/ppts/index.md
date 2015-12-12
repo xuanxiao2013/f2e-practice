@@ -911,7 +911,7 @@ define(function(require, exports, moudle){
 * 开发方式
     * (原生开发、基于jquery的DOM开发)、mvc、 mvvm、(flux、reflux、redux)
 
-* 业界
+* 业界前沿
     * [支付宝](http://ant.design/)
     * [百度](http://fis.baidu.com/)
     * [京东前端集成解决方案](https://github.com/putaoshu/jdf)

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>f.com</title>
 </head>
 <body>
 	看控制台输出结果<br />
@@ -12,11 +12,15 @@
         var ifr = document.getElementsByTagName("iframe")[0];
         ifr.addEventListener("load", function() {
             // 传送参数
-            ifr.contentWindow.postMessage("这个是给你传递的参数", "*");
+            var o = {
+                a: 12345
+            };
+            ifr.contentWindow.postMessage(JSON.stringify(o), "*");
         }, false);
          // 获取返回的数据
         window.addEventListener("message", function(e) {
-            console.log("响应数据: " + e.data);
+            //console.log("响应数据: " + e.data);
+            console.log(JSON.parse(e.data));
         });
     </script>
 </body>
