@@ -26,7 +26,11 @@ Parent.pay = function(){
 
 /*
  // 不调用构造方法实现
-function Son(){}
+function Son(){
+    // 如果 Son 的构造方法有参数需要处理，需要调用父类的构造方法
+    // 如果没有，可以不调用父类的构造方法
+    Parent.apply(this, arguments)
+}
 Son.prototype = new Parent();
 Son.prototype.constructor = Son;
 */
