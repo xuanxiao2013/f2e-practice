@@ -37,6 +37,23 @@ function getArticleList() {
     });
 }
 
+
+function runStyle() {
+    getArticleList().then(function(){
+        getArticle().then(function(){
+            getAuthor().then(function(){
+
+            }, function(){
+
+            });
+        }, function(){
+
+        });
+    }, function(){
+
+    });
+}
+
 function runStyle1() {
     function* run() {
         var articles = yield getArticleList();
